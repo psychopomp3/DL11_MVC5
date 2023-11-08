@@ -13,13 +13,14 @@
       <nav>
           <ul>
               <li><a href="<?= $view->path('home'); ?>">Home</a></li>
+              <li><a href="<?= $view->path('articles'); ?>">Liste des Articles</a></li>
+              <li><a href="<?= $view->path('add'); ?>">Ajouter Article</a></li>
               <li><a href="<?= $view->path('contact'); ?>">Contact</a></li>
-              <li><a href="<?= $view->path('single',array(12)); ?>">Single</a></li>
-              <li><a href="<?= $view->path('single2',array(12,'dedede')); ?>">Single2</a></li>
           </ul>
       </nav>
     </header>
 
+    
     <div class="container">
         <?= $content; ?>
     </div>

@@ -12,7 +12,7 @@ class ContactController extends Controller
 
     public function contactMethode()
     {
-        $message = 'Ceci est la page de Contact';
+        $message = '-- Contact --';
 
         $this->render('app.default.contactpage',array(
             'message' => $message,

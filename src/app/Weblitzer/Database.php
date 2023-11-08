@@ -54,7 +54,7 @@ class Database {
     {
         $query = $this->getPdo()->prepare($sql);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS,$className);
+        return $query->fetchAll(/* PDO::FETCH_CLASS,$className */);
     }
 
     public function aggregation($sql)
@@ -70,7 +70,7 @@ class Database {
 
         $query->execute($bind);
 
-        $query->setFetchMode(PDO::FETCH_CLASS,$className);
+        $query->setFetchMode(PDO::FETCH_ASSOC);
         if($one) {
             return $query->fetch();
         } else {
