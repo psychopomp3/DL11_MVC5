@@ -1,6 +1,7 @@
 <?php
 namespace App\Weblitzer;
 use \PDO;
+use \PDOException;
 
 /**
  * Class Autoloader

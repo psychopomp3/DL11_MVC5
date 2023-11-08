@@ -14,3 +14,5 @@ $app = \App\App::getInstance();
 require('../config/routes.php');
 $router = new \App\Weblitzer\Router($routes);
 
+
+?>

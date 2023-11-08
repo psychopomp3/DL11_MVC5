@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: ${PROJECT}-php
     restart: always
-    working_dir: /var/www/
+    working_dir: /var/www
     volumes:
       - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ../src:/var/www
