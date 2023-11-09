@@ -2,7 +2,6 @@
     <?= $message; ?>
 </h1>
 
-<!-- <?php print_r($articles); ?> -->
 
 <p>Actuellement il y a <?=$nbArticle?> articles sur le blog</p><br/>
 <section>
@@ -11,9 +10,6 @@
             <li>
                 <?=$article->id?>
                 <a href="<?= $view->path('article', [$article->id]); ?>"> <?=$article->titre?> </a>
-            
-                <!-- <a href="/article-delete?id=<?= $article->id ?>" onClick="return confirm(tu veux virer l'article là, sérieux!?)" class="btn-supr">x</a> -->
-            
             </li>
             <?php endforeach; ?>
     </ul>

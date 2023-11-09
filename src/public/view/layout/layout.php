@@ -13,8 +13,12 @@
       <nav>
           <ul>
               <li><a href="<?= $view->path('home'); ?>">Home</a></li>
+              <li><a href="<?= $view->path('profile'); ?>">Profil Utilisateur</a></li>
+              <li><a href="<?= $view->path('new'); ?>">Ajouter un nouvel Utilisateur</a></li>
+              <li><a href="<?= $view->path('listing'); ?>">Tableau de Bord des Utilisateurs</a></li>
               <li><a href="<?= $view->path('articles'); ?>">Liste des Articles</a></li>
               <li><a href="<?= $view->path('add'); ?>">Ajouter un Article</a></li>
+              <li><a href="<?= $view->path('dashboard'); ?>">Tableau de Bord des Articles</a></li>
               <li><a href="<?= $view->path('contact'); ?>">Contact</a></li>
           </ul>
       </nav>

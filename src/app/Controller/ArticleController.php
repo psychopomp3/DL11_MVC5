@@ -111,6 +111,19 @@ class ArticleController extends Controller
         ));
     }
 
+    public function dashArticleMeth()
+    {
+        $message = '-- Tableau de bord des Articles --';
+        $articles = ArticleModel::all();
+        $nbArticle = ArticleModel::count();
+
+        $this->render('app.article.dashboardarticle',
+        [
+            'message' => $message,
+            'articles' => $articles,
+            'nbArticle' => $nbArticle
+        ]);
+    }
 
     public function ifArticleExists($id)
     {
