@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Framework POO</title>
+    <title>Blog 2 Recettes 2 Cuisine</title>
     <link rel="stylesheet" type="text/css" href="<?= $view->asset('css/style.css'); ?>">
   </head>
   <body>

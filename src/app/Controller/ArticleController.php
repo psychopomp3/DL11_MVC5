@@ -34,7 +34,6 @@ class ArticleController extends Controller
         // var_dump($article);
 
         $this->render('app.article.showarticle', array(
-        
             'article' => $article
         ));
     }
@@ -82,6 +81,35 @@ class ArticleController extends Controller
         $this->redirect('articles');
     }
 
+
+    public function edit($id)
+    {
+        $articleEdit = $this->ifArticleExists($id);
+        $errors = [];
+
+        //validation -------------------------
+        if (!empty($_POST['submitted'])):
+            $postArticleEdit = $this->cleanXss($_POST);
+            $validerArticleEdit = new Validation();
+            $errors['titre'] = $validerArticleEdit->textValid($postArticleEdit['titre'], 'titre', 5, 100);
+            $errors['contenu'] = $validerArticleEdit->textValid($postArticleEdit['contenu'], 'contenu', 50, 2000);
+
+            if ($validerArticleEdit->IsValid($errors)):
+
+                ArticleModel::update($postArticleEdit, $id);
+                $this->redirect('articles');
+
+            endif;
+        endif;
+        //-------------------------------------
+
+        $formEdit = new Form($errors);
+
+        $this->render('app.article.editarticle', array(
+            'formEdit' => $formEdit,
+            'articleEdit' => $articleEdit
+        ));
+    }
 
 
     public function ifArticleExists($id)
