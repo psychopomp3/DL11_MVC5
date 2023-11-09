@@ -12,7 +12,7 @@
                 <?=$article->id?>
                 <a href="<?= $view->path('article', [$article->id]); ?>"> <?=$article->titre?> </a>
             
-                <!-- <a href="/article-delete?id=<?= $article->id ?>" onClick="return confirm(tu veux virer l'article là!?)" class="btn-supr">x</a> -->
+                <!-- <a href="/article-delete?id=<?= $article->id ?>" onClick="return confirm(tu veux virer l'article là, sérieux!?)" class="btn-supr">x</a> -->
             
             </li>
             <?php endforeach; ?>

@@ -14,7 +14,7 @@
           <ul>
               <li><a href="<?= $view->path('home'); ?>">Home</a></li>
               <li><a href="<?= $view->path('articles'); ?>">Liste des Articles</a></li>
-              <li><a href="<?= $view->path('add'); ?>">Ajouter Article</a></li>
+              <li><a href="<?= $view->path('add'); ?>">Ajouter un Article</a></li>
               <li><a href="<?= $view->path('contact'); ?>">Contact</a></li>
           </ul>
       </nav>

@@ -57,7 +57,11 @@ class ArticleController extends Controller
 
             if ($validerArticle->IsValid($errors)):
                 //méthode d'insertion
-                echo "insertion";
+                // echo "insertion";
+
+            ArticleModel::insert($postArticle);
+            $this->redirect('articles');
+
             endif;
 
         endif;
@@ -69,6 +73,7 @@ class ArticleController extends Controller
         ));
     }
 
+    
     public function delete($id)
     {
         $article = $this->ifArticleExists($id);
@@ -78,11 +83,12 @@ class ArticleController extends Controller
     }
 
 
+
     public function ifArticleExists($id)
     {
         $article = ArticleModel::findById($id);
 
-        return (empty($article)) ? $this->Abort404() : $article;
+        return (empty($article)) ? $this->Abort404() :  $article;
     }
 
 

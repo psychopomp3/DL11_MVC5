@@ -23,7 +23,8 @@ class Model
      */
     public static function all()
     {
-        return App::getDatabase()->query("SELECT * FROM ".self::getTable(),get_called_class());
+        return App::getDatabase()->query("SELECT * FROM ".self::getTable(),
+        get_called_class());
     }
 
     public static function findById($id,$columId = 'id')
